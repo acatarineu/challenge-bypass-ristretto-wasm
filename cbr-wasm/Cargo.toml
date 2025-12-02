@@ -5,20 +5,20 @@ authors = ["eV <ev@7pr.xyz>"]
 edition = "2018"
 description = "a WASM crate to expose functionality from challenge-bypass-ristretto (WIP)"
 
-
 [lib]
 crate-type = ["cdylib"]
 name = "challenge_bypass_ristretto"
 
 [dependencies]
 wasm-bindgen = "0.2"
-rand = { version = "0.6.0", features = ["wasm-bindgen"] }
-sha2 = "0.8"
-hmac = "0.7"
+rand = { version = "0.7", features = ["wasm-bindgen"] }
+sha2 = "0.9"
+hmac = "0.10"
+getrandom = { version = "0.1", features = ["wasm-bindgen"] }
 
 [dependencies.challenge-bypass-ristretto]
 git = "https://github.com/brave-intl/challenge-bypass-ristretto"
-rev = "7e25308ad5b5e2daf73d586fae06eed33547cf22"
+rev = "a1da4641734adc8312215b38a8221962d2c8e045"
 features = ["base64", "nightly"]
 
 [dependencies.cbr-macros]
